@@ -126,3 +126,17 @@ One thing To do is create a separate folder called components and then have a sa
 - Now we need to set the margin around the button. so we define a new rule for buttons within an input-group
 - We can also replace the button with an icon. Grab our basic icon tablet from the icons.html and replace it with the button
 - when we type something in the input field there is so much space between the icon and input field, so we need to target input components inside the input-group and set the padding to 1.5rem.
+
+
+## Card Component
+
+- Card have round corners, a header which can be different colors, a body and some shadow around it.
+- create a div with a class of “cards”. Create a header element within it a give it class of card__header and for label we’ll add Card Title. Firstly we will built a basic card component, then we’ll add all the other things in it.
+- Right next to the header we are going to have a div with a class of card__body and some dummy text inside it.
+- Now we need to style this, so we’ll define a rule for class .card. We’ll set the border-radius to 7px and box-shadow to 0(for vertical offset) 0(for horizintal offset) 20px(for blurring) 10px(for spreading the shadow) #f3f3f3(shadow color). Now the card has stretched to take all the available horizontal space, because we are using divs and divs are block level element. we shouldn’t apply width to this component because this component should be fluid and flexible, so we can put it inside any container and the size will be determined by the container. So to make the web site responsive we are going to let the card stretch and take all the available space.
+- Next we need to work on the header, for it we’ll define a new rule called card__header and apply a padding of 2 rem(Top and bottom) and 3 rem (right and left). we also wan to apply the same padding in the body of the card, so our elements will be line up properly. so we use a comma and type a second selector e.g. .card__header, .card__body { }.
+- Now we need to create two skins primary and secondary with those classes. so with our cards class we’ll add another class called card—primary, then define a rule for it in the style sheet. If we have an element with class card—primary, the header in this element should have a background color of —color-primary and the text white e.g .card--primary .card__header {
+  background-color: var(--color-primary);
+  color: white;
+}
+

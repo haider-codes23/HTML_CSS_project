@@ -181,6 +181,7 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin: 10px 10px 10px 10px;
 }
 
 /* Buttons */
@@ -292,6 +293,41 @@ a {
 .input-groups .btn {
   margin: 5px;
 }
+
+/* Card Component*/
+
+.cards {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  margin-left: 3rem;
+  overflow: hidden;
+  
+}
+
+.card__header, .card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

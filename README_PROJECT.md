@@ -113,3 +113,16 @@ One thing To do is create a separate folder called components and then have a sa
 - create a input element and give a class input. Go the style sheet and define rules for class .input. Set the padding first e.g give it top and bottom padding of 1.5rem and right and left padding of 3.5 rem. Then set the border property to 1rem solid #ccc. And set the border radius to 30px. Then we want to get rid of the dark blue border so we will set the outline property to 0. Then we’ll set the font color to —color-heading and set the font-size to 2rem.
 - Our placeholder’s font is a little darker so we will use a pseudo class selector e.g. ::placeholder { } and se the color property to #ccc which is light grey.
 - Then we need to decrease the font size for screens wider than 1024 px so we’ll write a media query and write a new rule for input class and set the font size to 1.5rem.
+
+## Input groups Component
+
+- We have a simple input component ready but now how are we going to put the button inside the input component.
+- what you see in the design is not the input component, it is giving the illusion of being an input component. In reality we have a div or a container and inside this div we have two elements, an input component and a button, the input component doesn’t have any borders, the actual border is applied to the div or the container.
+- So we’ll create a div with a class of input-group. And create an input element with the class input that we created earlier and a button with classes “btn” and “btn—accent”
+- In our input-group class we can group an input component or an input field with something else. Here we are grouping it with a button, but we can group it with an icon or any other element.
+- inside the input-group class we are going to set the border to 1px solid var(—color-border) and border radius to var(—border-radius). We get a weird layout, first we need to remove the border from the input component, this is where we need to use nesting so if we are in an input-group and that input has an input then that input should not have a border e.g. .input-group .input { border:0 }
+- next issue is the placement of the button and that input group has stretched to take up all the available space, because it’s a div which is a block level element. so to push the button to the right we need the input component to grow and take up all the available space. We can use flex here, So we’ll set the display property in class input-group to flex. and
+- next we need target the element inside the input-group which has a class of input and we need to set it’s flex-grow property to 1, so that the input component takes up as much space as available and pushes the button to the end of the container.
+- Now we need to set the margin around the button. so we define a new rule for buttons within an input-group
+- We can also replace the button with an icon. Grab our basic icon tablet from the icons.html and replace it with the button
+- when we type something in the input field there is so much space between the icon and input field, so we need to target input components inside the input-group and set the padding to 1.5rem.

@@ -140,3 +140,15 @@ One thing To do is create a separate folder called components and then have a sa
   color: white;
 }
 
+
+## Plans (This is where we group a card component, with a heading, a badge component , a styled vertical list component and a button)
+
+- So we are going to start of by wrapping our card component in a div with a class plan. So plan consists of a card. The card consists of a footer and a body. The header consists of a bunch of elements e.g. the name of the plan, the price, the billing cycle and a badge and a description.
+- So in our header tag we are going to add a bunch of elements. Firstly we use a h3 heading that represents the name of the plan. The reason why we choose a h3 heading is because we have a h2 heading right above it in the design mock up and we dont want to skip any headings because then our mark up wouldn’t be semantic. There should be a proper hierarchy. Then we are going to give our h3 heading a class plan__name, so this is the name element inside the plan container or block and this element plan__name shouldn’t exist outside of this block.
+- Next we are going to add a span element for applying styles to our text for the price and give it a class plan__price. The add another span element and give it a class plan__billing-cycle. Then add another span element for the badge  which have the classes badge, badge—secondary and badge—small. And then add another span element for description.
+- Now our plan looks way off so lets style it. We’ll start off by defining a rule for class plan__name and set the font color to #fff(white), then set the margin to 0, then decrease the font wight a bit and set it to 500, so thats a little thinner. Then we need to decrease the font size a bit e.g 2.4 rems.
+- Next we define a rule for plan__price class. And set the font-size to 6 rem as per our design mock up.
+- Next we define a rule for class plan__billing-cycle. And set the font-size to 2.4 rem that’s 24 pixels. Now the text looks a little softer than others so we’ll set the opacity to 0.9. Then our plan__billing-cycle is to close to the badge so we will give it a margin right of 1rem.
+- Next we need to define a rule for class plan__description. And set the font-size to 2rem, then set the font-weight to 300 becz our text should look thinner, then letter-spacing to 1px because the space between characters is less. Now if we increase the width of the screen the plan__description moves up along the badge which shouldn’t happen so we set it’s display property to block.
+- Now our list items are too close, so we’ll write a new rule for elements with class plan that contain element with class list__items e.g. .plan .list__item { margin-bottom: 2rem;}
+- Next we need to write a media query for wider screens, we need to make the the plan__name font-size smaller e.g. from 2.4 to 1.4 rem, the plan__price font-size smaller e.g. from 6 to 5 rem and the plan__description font-size smaller e.g. from 2 to 1.7 rem.
